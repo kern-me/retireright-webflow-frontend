@@ -1,19 +1,23 @@
 # retireright-webflow-frontend
 
 Site-wide custom CSS/JS for the RetireRight Webflow site, edited as local files and
-served via jsDelivr. **Additive** — layers on top of Webflow Designer styles and any
+served via **GitHub Pages**. **Additive** — layers on top of Webflow Designer styles and any
 custom code already in the site; it replaces nothing.
 
-**Must stay a public repo** (jsDelivr only serves public GitHub repos). Frontend code is
-public anyway — never commit secrets.
+Two-file ownership: `custom.css` is Claude-owned (curated); `browser.css` is Nico-owned
+(edited visually in Chrome via Local Overrides). `custom.js` is Claude-owned interactions.
 
-## Live URLs (set once in Webflow site-wide custom code)
+Served from GitHub Pages (reflects the latest commit ~1 min after push, `Cache-Control: max-age=600`).
+We moved off jsDelivr `@main` because its branch cache served stale commits for hours.
 
-- Head:   `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kern-me/retireright-webflow-frontend@main/custom.css">`
-- Footer: `<script defer src="https://cdn.jsdelivr.net/gh/kern-me/retireright-webflow-frontend@main/custom.js"></script>`
+## Live URLs (plain tags in Webflow site-wide custom code)
+
+- Head:   `<link rel="stylesheet" href="https://kern-me.github.io/retireright-webflow-frontend/custom.css">`
+- Head:   `<link rel="stylesheet" href="https://kern-me.github.io/retireright-webflow-frontend/browser.css">`
+- Footer: `<script defer src="https://kern-me.github.io/retireright-webflow-frontend/custom.js"></script>`
 
 ## Make a tweak
 
-1. Edit `custom.css` or `custom.js` (keep changes under a labeled section).
-2. `./deploy.sh "short message"` — commits, pushes, purges jsDelivr, verifies the CDN.
-3. Hard-refresh the page to see it.
+1. Edit `custom.css` / `custom.js` (or Nico edits `browser.css` in Chrome).
+2. `./deploy.sh "short message"` — commits, pushes, waits for Pages, verifies served bytes.
+3. Reload the page (updates reach everyone within ~10 min via the Pages cache).
