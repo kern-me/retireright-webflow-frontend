@@ -5,7 +5,7 @@ set -euo pipefail
 
 REPO="kern-me/retireright-webflow-frontend"
 BRANCH="main"
-FILES=(custom.css custom.js)
+FILES=(custom.css custom.js browser.css)
 cd "$(dirname "$0")"
 
 msg="${1:-update}"
