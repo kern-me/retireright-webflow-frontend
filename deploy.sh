@@ -13,7 +13,7 @@ git add -A
 if git diff --cached --quiet; then
   echo "No changes to commit; re-purging anyway."
 else
-  git commit -q -m "$msg"   # ponytail: no attribution, per Nico's preference
+  git commit -q -m "$msg"
   git push -q origin "$BRANCH"
 fi
 
