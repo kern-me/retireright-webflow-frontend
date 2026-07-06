@@ -240,19 +240,28 @@ padding: 1em;
     }
 }
 
-.subtitle:not(:empty) {
-    margin-top: -10px;
-}
-
 :is(h1, h2, h3, h4, p):empty {
     display: none;
 }
+
+:is(h2, h3) + .subtitle:not(:empty) {
+    margin-top: -10px;
+}
+
+.subtitle + :is(h2, h3) {
+    margin-top: 0;
+}
+
 .light-blue-section h3 {
     text-align: center;
     font-size: 28px;
     font-weight: 600;
     color: var(--_brand-colors---navy-deep);
     font-family: var(--_typography---font-sans);
+
+    &:is(.text-left) {
+        text-align: left;
+    }
 }
 
 /* Top borders of light blue section */
