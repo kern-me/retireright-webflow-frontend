@@ -379,7 +379,7 @@ body.modal-launched::before {
     display: grid;
     grid-template-columns: max-content 1fr;
     text-align: left;
-    padding: 5px 10px
+    padding: 5px 10px;
 
     & :is(.w-dropdown, .w-dropdown-list, .w-dropdown-list.w--open)  {
         /* Display contents to align element's child to accordion's display: grid */
