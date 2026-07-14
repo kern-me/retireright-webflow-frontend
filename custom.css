@@ -375,11 +375,11 @@ body.modal-launched::before {
 }
 
 .accordion {
-    --gap: 10px;
     display: grid;
     grid-template-columns: max-content 1fr;
     text-align: left;
-    padding: 5px 10px;
+    padding: 0;
+    gap: 10px;
 
     & :is(.w-dropdown, .w-dropdown-list, .w-dropdown-list.w--open)  {
         /* Display contents to align element's child to accordion's display: grid */
@@ -397,16 +397,31 @@ body.modal-launched::before {
     }
 
     & .w-dropdown-toggle {
-        padding: var(--gap);
         grid-column: 1 / 2;
+        border-left: 5px solid transparent;
+        transition: .125s border ease-in-out, .125s background ease-in-out;
+        font-weight: 600;
+        padding: 10px 20px;
+        padding-left: 15px;
+
+        &[aria-expanded="true"] {
+            border-left: 5px solid var(--_brand-colors---navy-deep);
+        }
+
+        & + .w-dropdown-toggle {
+            border-top: 1px;
+            padding-top: 9px;
+        }
     }
 
     & .w-dropdown-link {
         display: none;
         grid-column: 2 / 3;
+        white-space: normal;
 
         &:is(.w--open &) {
             display: block;
+            /* background: white; */
         }
 
         &:nth-child(1) {
@@ -438,6 +453,45 @@ body.modal-launched::before {
         }
         &:nth-child(10) {
             grid-row-start: 10;
+        }
+        &:nth-child(11) {
+            grid-row-start: 11;
+        }
+    }
+
+    & .w-dropdown {
+        &:nth-child(1) .w-dropdown-toggle {
+            grid-row-start: 1;
+        }
+        &:nth-child(2) .w-dropdown-toggle {
+            grid-row-start: 2;
+        }
+        &:nth-child(3) .w-dropdown-toggle {
+            grid-row-start: 3;
+        }
+        &:nth-child(4) .w-dropdown-toggle {
+            grid-row-start: 4;
+        }
+        &:nth-child(5) .w-dropdown-toggle {
+            grid-row-start: 5;
+        }
+        &:nth-child(6) .w-dropdown-toggle {
+            grid-row-start: 6;
+        }
+        &:nth-child(7) .w-dropdown-toggle {
+            grid-row-start: 7;
+        }
+        &:nth-child(8) .w-dropdown-toggle {
+            grid-row-start: 8;
+        }
+        &:nth-child(9) .w-dropdown-toggle {
+            grid-row-start: 9;
+        }
+        &:nth-child(10) .w-dropdown-toggle {
+            grid-row-start: 10;
+        }
+        &:nth-child(11) .w-dropdown-toggle {
+            grid-row-start: 11;
         }
     }
 }
