@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
-# Deploy custom.css/custom.js/browser.css via GitHub Pages: commit -> push -> verify.
-# Pages rebuilds ~30-90s after push and serves the latest commit (Cache-Control: max-age=600).
+# Commit -> push -> confirm the pushed bytes are the ones Pages is serving.
+# There is no deploy step: Pages serves whatever is on main. The push IS the deploy.
+# The md5 poll exists only to disambiguate "my change isn't showing": once a file
+# reports OK, it is provably live, so anything still wrong is your CSS or your cache.
+# Pages rebuilds ~30-90s after push and serves Cache-Control: max-age=600.
 # Usage: ./deploy.sh "short message"
 set -euo pipefail
 
@@ -9,7 +12,9 @@ FILES=(custom.css custom.js browser.css rr-lp.css rr-script.js rr-lp-browser.css
 cd "$(dirname "$0")"
 
 msg="${1:-update}"
-git add -A
+# Stage only the files this repo serves, plus its own tooling. Never `git add -A`:
+# this repo is shared with John, and -A sweeps in whatever else is in the tree.
+git add -- "${FILES[@]}" deploy.sh README.md
 if git diff --cached --quiet; then
   echo "Nothing new to commit."
 else
