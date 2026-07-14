@@ -8,7 +8,7 @@
 set -euo pipefail
 
 BASE="https://kern-me.github.io/retireright-webflow-frontend"
-FILES=(custom.css custom.js browser.css rr-lp.css rr-script.js rr-lp-browser.css)
+FILES=(custom.css custom.js browser.css rr-lp.css rr-script.js rr-lp-browser.css rr-avatar-logo.png)
 cd "$(dirname "$0")"
 
 msg="${1:-update}"

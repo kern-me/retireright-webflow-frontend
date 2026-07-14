@@ -1786,3 +1786,12 @@
 #rr-lp .why-card h3 {
   text-transform: none;
 }
+
+/* Testimonial avatars: these clients aren't supplying headshots, so the mockup's
+   dashed "Photo" placeholder becomes the RR round mark on brand blue. The word
+   "Photo" is a literal text node in the markup — font-size:0 is what hides it. */
+#rr-lp .t-avatar {
+  background: var(--primary-dark) url('https://kern-me.github.io/retireright-webflow-frontend/rr-avatar-logo.png') center / 62% no-repeat;
+  border: none;
+  font-size: 0;
+}
