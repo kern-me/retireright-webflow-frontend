@@ -11,11 +11,13 @@ cd "$(dirname "$0")"
 msg="${1:-update}"
 git add -A
 if git diff --cached --quiet; then
-  echo "No changes to commit; re-checking Pages anyway."
+  echo "Nothing new to commit."
 else
-  git commit -q -m "$msg"   # ponytail: no attribution, per Nico's preference
-  git push -q origin main
+  git commit -q -m "$msg"
 fi
+# Push unconditionally: a commit may already exist unpushed (e.g. after a rebase),
+# in which case there is nothing to stage and the commit branch above is skipped.
+git push -q origin main
 
 # Poll until Pages serves the bytes we just pushed (build lag is ~30-90s).
 fail=0
