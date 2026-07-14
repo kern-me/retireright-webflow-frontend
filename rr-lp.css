@@ -1777,3 +1777,12 @@
   }
 
 /* v9 */
+
+/* Card titles are Title Case in the approved mockup — no text-transform anywhere.
+   The uppercase comes from the host site's global stylesheet bleeding into #rr-lp,
+   so this must SET a value; deleting a declaration of ours would let the global win. */
+#rr-lp .pillar-card h3,
+#rr-lp .process-step h3,
+#rr-lp .why-card h3 {
+  text-transform: none;
+}

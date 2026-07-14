@@ -214,3 +214,36 @@
       if (fwVideo.currentTime < 0.1) fwOverlay.classList.remove('hidden');
     });
   }
+
+  /* Superscript the trademark symbol in display type. The .tm rule already lives in
+     rr-lp.css; only the markup is missing. Done here rather than in the Webflow DOM
+     because data_whtml_builder drops classes on elements it touches.
+     Display type only — the small labels and FAQ body copy read fine at Inter size. */
+  (function wrapTrademarks() {
+    var TM = '\u2122';   // escaped: the literal glyph is easy to mangle in an editor
+    var TARGETS = '#rr-lp .quiz-head h2, #rr-lp .quiz-header-title, #rr-lp .process-step h3';
+
+    document.querySelectorAll(TARGETS).forEach(function (el) {
+      var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      var nodes = [];
+      var n;
+      while ((n = walker.nextNode())) {
+        if (n.nodeValue.indexOf(TM) === -1) continue;
+        if (n.parentElement.classList.contains('tm')) continue;   // already wrapped
+        nodes.push(n);
+      }
+      nodes.forEach(function (node) {
+        var frag = document.createDocumentFragment();
+        node.nodeValue.split(TM).forEach(function (part, i) {
+          if (i > 0) {
+            var sup = document.createElement('span');
+            sup.className = 'tm';
+            sup.textContent = TM;
+            frag.appendChild(sup);
+          }
+          if (part) frag.appendChild(document.createTextNode(part));
+        });
+        node.parentNode.replaceChild(frag, node);
+      });
+    });
+  })();
