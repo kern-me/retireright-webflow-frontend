@@ -113,6 +113,11 @@ padding: 1em;
 
 /* ===== COMPONENTS ===== */
 
+:is(p, .button-link):last-child {
+    /* No gap following the last element in an area */
+    margin-bottom: 0;
+}
+
 .rr-heading--mixed {
     line-height: 1.2;
     font-weight: 600;
@@ -275,6 +280,7 @@ img ~ .button-link {
     position: relative;
     padding-top: var(--gap);
 }
+
 .light-blue-section :is(p, .w-richtext:has(p:last-child)) + .w-richtext h3::before {
     content: '';
     position: absolute;
@@ -284,12 +290,11 @@ img ~ .button-link {
     right: 10%;
     border-top: 2px solid white;
 }
-.light-blue-section .w-richtext:has(h3) {
-    margin-top: var(--gap);
-}
+
 .grid-item ul {
     padding-left: 1ch;
 }
+
 .light-blue-section:last-of-type {
     padding-bottom: 40px;
 }
@@ -494,7 +499,25 @@ body.modal-launched::before {
             grid-row-start: 11;
         }
     }
+
+    @media (max-width: 900px) {
+        & {
+            display: block;
+    
+            & .w-dropdown-toggle {
+                pointer-events: none;
+                    &.w--open {
+                        border-left: 5px solid transparent;
+                    }
+            }
+    
+            & .w-dropdown-link {
+                display: block;
+            }
+        }
+    }
 }
+
 
 
 /* ===== UTILITIES ===== */
