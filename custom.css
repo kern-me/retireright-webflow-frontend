@@ -289,7 +289,7 @@ img ~ .button-link {
     padding-bottom: 40px;
 }
 
-.light-blue-section a:is(:not(:hover), :not(:focus)) {
+.light-blue-section a:not(:is([class], :hover, :focus)) {
     color: var(--_brand-colors---navy-deep);
 }
 
