@@ -281,22 +281,21 @@ img ~ .button-link {
     padding-top: var(--gap);
 }
 
-.light-blue-section :is(p, .w-richtext:has(p:last-child)) + .w-richtext h3::before {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 10%;
-    right: 10%;
-    border-top: 2px solid white;
-}
-
 .grid-item ul {
     padding-left: 1ch;
 }
 
 .light-blue-section:last-of-type {
     padding-bottom: 40px;
+}
+
+.light-blue-section a:is(:not(:hover), :not(:focus)) {
+    color: var(--_brand-colors---navy-deep);
+}
+
+.affiliated-firm:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
 }
 
 /* Profile modal styles */
