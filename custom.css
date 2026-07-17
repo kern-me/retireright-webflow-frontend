@@ -161,9 +161,7 @@ padding: 1em;
     }
 }
 
-.light-blue-section + .light-blue-section {
-    paddding-top: 0;
-}
+
 
 /* Button links */
 
@@ -263,6 +261,20 @@ img ~ .button-link {
     font-size: 24px;
 }
 
+/* Content section and light-blue-section */
+
+.content-section + .content-section {
+    padding-top: 0;
+}
+
+.content-section:first-of-type :is(h1, h2) {
+    margin-top: 0;
+}
+
+.light-blue-section + .light-blue-section {
+    padding-top: 0;
+}
+
 .light-blue-section h3 {
     text-align: center;
     font-size: 28px;
@@ -275,8 +287,8 @@ img ~ .button-link {
     }
 }
 
-/* Top borders of light blue section */
 .light-blue-section :is(p, .w-richtext:has(p:last-child)) + .w-richtext h3 {
+    /* Top borders of light blue section */
     position: relative;
     padding-top: var(--gap);
 }
@@ -293,10 +305,16 @@ img ~ .button-link {
     color: var(--_brand-colors---navy-deep);
 }
 
+.light-blue-section.w-col {
+    padding-inline: 30px;
+}
+
 .affiliated-firm:last-child {
     margin-bottom: 0;
     border-bottom: none;
 }
+
+
 
 /* Profile modal styles */
 
