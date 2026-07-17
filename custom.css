@@ -381,14 +381,14 @@ body.modal-launched::before {
 .sidebar {
     line-height: 1.2em;
     
-    &:is(h2, h3) {
+    & :is(h2, h3) {
         font-family: var(--_typography---font-sans);
         font-size: 1rem;
         font-weight: 700;
         line-height: 1.4em;
     }
 
-    &:is(h2, h3):first-child {
+    & :is(h2, h3):first-child {
         margin-top: 0;
     }
     
