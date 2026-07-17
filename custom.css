@@ -380,19 +380,36 @@ body.modal-launched::before {
 
 .sidebar {
     line-height: 1.2em;
-
-    & section + section {
-        margin-top: 1em;
-        padding-top: 1em;
-        border-top: 1px solid lightgray;
+    
+    &:is(h2, h3) {
+        font-family: var(--_typography---font-sans);
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.4em;
     }
 
     &:is(h2, h3):first-child {
         margin-top: 0;
     }
-
+    
     & img {
         margin-bottom: 10px;
+    }
+}
+
+.sidebar section {
+    padding-block: calc(var(--padding) * .4);
+    
+    &:is(:first-child) {
+        padding-top: 0;
+    }
+    
+    &:is(:last-child) {
+        padding-bottom: 0;
+    }
+    
+    & + section {
+        border-top: 1px solid lightgray;
     }
 }
 
