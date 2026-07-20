@@ -113,6 +113,10 @@ padding: 1em;
 
 /* ===== COMPONENTS ===== */
 
+.w-container {
+    max-width: var(--container-width);
+}
+
 :is(p, .button-link):last-child {
     /* No gap following the last element in an area */
     margin-bottom: 0;
@@ -160,8 +164,6 @@ padding: 1em;
         transform: rotate(180deg);
     }
 }
-
-
 
 /* Button links */
 
@@ -263,9 +265,13 @@ img ~ .button-link {
 
 /* Content section and light-blue-section */
 
-.content-section + .content-section {
+.content-section:is([class*="w-variant"], .grid-a) + .content-section:is([class*="w-variant"], .grid-a), .content-section:not(:is([class*="w-variant"]), .grid-a) + .content-section:not(:is([class*="w-variant"], .grid-a))
+ {
+    /* Don't include padding-top when a content-section follows a content-section. Verbose selector required so that content-section first content-section with a different colored background will still get padding */
     padding-top: 0;
 }
+
+
 
 .content-section:first-of-type :is(h1, h2) {
     margin-top: 0;
@@ -383,9 +389,10 @@ body.modal-launched::before {
     
     & :is(h2, h3) {
         font-family: var(--_typography---font-sans);
-        font-size: 1rem;
+        font-size: 1.3rem;
         font-weight: 700;
         line-height: 1.4em;
+        text-transform: unset;
     }
 
     & :is(h2, h3):first-child {
@@ -400,8 +407,10 @@ body.modal-launched::before {
 .sidebar section {
     padding-block: calc(var(--padding) * .4);
     
-    &:is(:first-child) {
-        padding-top: 0;
+    @media (min-width: 768px) {
+        &:is(:first-child) {
+            padding-top: 0;
+        }
     }
     
     &:is(:last-child) {
