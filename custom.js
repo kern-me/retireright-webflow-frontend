@@ -38,4 +38,11 @@
     //Make sure the first accordion item is open when page loads
     // el.classList.add('w--open');
   });
+
+  $('.w-dropdown-toggle').on('click', function() {
+    //Toggle accordion items open/closed
+    $('.rr-open').removeClass('rr-open');
+    $(this).addClass('rr-open');
+    $(this).siblings('nav').addClass('rr-open');
+  });
 })();
