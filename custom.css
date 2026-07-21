@@ -337,7 +337,7 @@ img ~ .button-link {
     display: block;
     position: absolute;
     top: calc(var(--gap) * -1);
-    left: calc(50% - (var(--width) * 5));
+    left: calc(50% - (var(--width) * .5));
     border: 1px solid var(--_brand-colors---link);
     opacity: .5;
     width: var(--width);
