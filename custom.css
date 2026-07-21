@@ -331,11 +331,11 @@ img ~ .button-link {
     color: var(--_brand-colors---navy-deep);
 }
 
-.light-blue-section.w-col,
+/* .light-blue-section.w-col,
 .w-col .light-blue-section {
-    /* Fix padding inside of columns */
+    Fix padding inside of columns
     padding-inline: 30px;
-}
+} */
 
 .affiliated-firm:last-child {
     margin-bottom: 0;
