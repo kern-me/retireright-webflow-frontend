@@ -32,12 +32,10 @@
   // Add features here. Pattern:
   //   var el = document.querySelector('.thing');
   //   if (!el) return;   // no-op if not on this page
-
+  
   // Accordion
   document.querySelectorAll('.accordion .w-dropdown:first-child > .w-dropdown-toggle, .accordion .w-dropdown:first-child > nav').forEach(function (el) {
     //Make sure the first accordion item is open when page loads
-    el.classList.add('rr-open');
+    // el.classList.add('w--open');
   });
-
-
 })();
