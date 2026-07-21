@@ -277,13 +277,11 @@ img ~ .button-link {
 
 /* Content section and light-blue-section */
 
-.content-section:is([class*="w-variant"], .grid-a) + .content-section:is([class*="w-variant"], .grid-a), .content-section:not(:is([class*="w-variant"]), .grid-a) + .content-section:not(:is([class*="w-variant"], .grid-a))
+.content-section:is([class*="w-variant"], .grid-a) + .content-section:is([class*="w-variant"], .grid-a), .content-section:not(:is([class*="w-variant"]), .grid-a, .testimonial-b) + .content-section:not(:is([class*="w-variant"], .grid-a, .testimonial-b))
  {
     /* Don't include padding-top when a content-section follows a content-section. Verbose selector required so that content-section first content-section with a different colored background will still get padding */
     padding-top: 0;
 }
-
-
 
 .content-section:first-of-type :is(h1, h2) {
     margin-top: 0;
