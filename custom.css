@@ -277,7 +277,8 @@ img ~ .button-link {
 
 /* Content section and light-blue-section */
 
-.content-section:is([class*="w-variant"], .grid-a) + .content-section:is([class*="w-variant"], .grid-a), .content-section:not(:is([class*="w-variant"]), .grid-a, .testimonial-b) + .content-section:not(:is([class*="w-variant"], .grid-a, .testimonial-b))
+.content-section:is([class*="w-variant"], .grid-a) + .content-section:is([class*="w-variant"], .grid-a), 
+.content-section:not(:is([class*="w-variant"]), .grid-a, .testimonial-b, .blue-background) + .content-section:not(:is([class*="w-variant"], .grid-a, .testimonial-b, .blue-background))
  {
     /* Don't include padding-top when a content-section follows a content-section. Verbose selector required so that content-section first content-section with a different colored background will still get padding */
     padding-top: 0;
@@ -368,6 +369,11 @@ body.modal-launched {
 body.modal-launched::before {
     /* Overlay for content under modal */
     background: rgb(0 0 0 / 80%);
+}
+
+.rr-profile:last-child:is(:nth-of-type(3n+4)) {
+    /* Center align the last profile card if it would be the first item it it's row */
+    grid-column: 2 / 3;
 }
 
 .profile-modal {
