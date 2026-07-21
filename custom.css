@@ -177,6 +177,11 @@ transform: rotate(-45deg) translate(5px, -5px);
     }
 }
 
+/* Slider */
+.w-slider:is(:hover, :focus, :focus-within) :is(.w-slider-arrow-left, .w-slider-arrow-right) {
+    opacity: 1;
+}
+
 /* Button links */
 
 img ~ .button-link {
@@ -326,7 +331,9 @@ img ~ .button-link {
     color: var(--_brand-colors---navy-deep);
 }
 
-.light-blue-section.w-col {
+.light-blue-section.w-col,
+.w-col .light-blue-section {
+    /* Fix padding inside of columns */
     padding-inline: 30px;
 }
 
@@ -423,7 +430,7 @@ body.modal-launched::before {
         font-family: var(--_typography---font-sans);
         font-size: 1.3rem;
         font-weight: 700;
-        line-height: 1.4em;
+        line-height: 1.2em;
         text-transform: unset;
     }
 
