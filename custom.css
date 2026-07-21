@@ -329,7 +329,19 @@ img ~ .button-link {
 
 .affiliated-firm:last-child {
     margin-bottom: 0;
-    border-bottom: none;
+}
+
+.affiliated-firm+.affiliated-firm::before {
+    --width: 300px;
+    content: '';
+    display: block;
+    position: absolute;
+    top: calc(var(--gap) * -1);
+    left: calc(50% - (var(--width) * 5));
+    border: 1px solid var(--_brand-colors---link);
+    opacity: .5;
+    width: var(--width);
+    max-width: 100%;
 }
 
 
