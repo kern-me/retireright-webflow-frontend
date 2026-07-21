@@ -303,7 +303,7 @@ img ~ .button-link {
 
 .light-blue-section h3 {
     text-align: center;
-    font-size: 28px;
+    /* font-size: 28px; */
     font-weight: 600;
     color: var(--_brand-colors---navy-deep);
     font-family: var(--_typography---font-sans);
@@ -468,7 +468,7 @@ body.modal-launched::before {
     padding-bottom: 10px;
     gap: 0 10px;
 
-    & :is(.w-dropdown, .w-dropdown-list, .w-dropdown-list.w--open)  {
+    & :is(.w-dropdown, .w-dropdown-list, .w-dropdown-list.rr-open)  {
         /* Display contents to align element's child to accordion's display: grid */
         display: contents;
     }
@@ -491,7 +491,7 @@ body.modal-launched::before {
         padding: 10px 20px;
         padding-left: 15px;
 
-        &.w--open {
+        &.rr-open {
             border-left: 5px solid var(--_brand-colors---navy-deep);
         }
 
@@ -506,7 +506,7 @@ body.modal-launched::before {
         grid-column: 2 / 3;
         white-space: normal;
 
-        &:is(.w--open &) {
+        &:is(.rr-open &) {
             display: block;
             /* background: white; */
         }
@@ -588,7 +588,7 @@ body.modal-launched::before {
     
             & .w-dropdown-toggle {
                 pointer-events: none;
-                    &.w--open {
+                    &.rr-open {
                         border-left: 5px solid transparent;
                     }
             }
