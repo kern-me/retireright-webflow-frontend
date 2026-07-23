@@ -188,6 +188,10 @@ img ~ .button-link {
     margin-top: 10px;
 }
 
+.rr-bg--navy .button-link:not(:hover, :focus) {
+    background: var(--_brand-colors---green-dark);
+}
+
 /* Flip Card component */
 .flip-card {
     min-height: 270px;
