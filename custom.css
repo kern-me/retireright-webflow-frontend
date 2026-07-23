@@ -188,7 +188,7 @@ img ~ .button-link {
     margin-top: 10px;
 }
 
-.rr-bg--navy .button-link:not(:hover, :focus) {
+:is(.rr-bg--navy, .dark-flipped) .button-link:not(:hover, :focus) {
     background: var(--_brand-colors---green-dark);
 }
 
