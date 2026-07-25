@@ -55,9 +55,11 @@
   }
   #rr-lp .nav-logo { display: flex; align-items: center; height: auto; } /* height:auto overrides Webflow global-sheet height:100% that bleeds in */
   #rr-lp .nav-logo-img { height: 70px; width: auto; display: block; }
-  #rr-lp /* dark backgrounds (footer): swap to a white version of the logo via filter */
-  footer .nav-logo-img {
-    filter: brightness(0) invert(1);
+  /* dark backgrounds (footer): the footer Image element points at the white logo asset directly.
+     Do NOT reinstate a brightness(0)/invert() filter here - the source PNG has a 1-bit alpha
+     channel and carries its antialiasing in RGB, so forcing every pixel white discards that AA
+     and the logo renders with hard, jagged edges. */
+  #rr-lp footer .nav-logo-img {
     opacity: 0.92;
   }
   #rr-lp .nav-links { display: flex; gap: 32px; align-items: center; }
