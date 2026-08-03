@@ -666,6 +666,7 @@ body.modal-launched::before {
     animation-duration: 1ms;
     /* animation-duration required for Firefox compatibility */
     animation-direction: alternate;
+    animation-fill-mode: both;
     animation-timeline: view(block 10%);
 }
 
