@@ -622,11 +622,11 @@ body.modal-launched::before {
         top: var(--distance);
     }
 
-    50% {
+    25% {
         opacity: 1;
     }
 
-    100% {
+    50% {
         top: 0;
     }
 }
@@ -634,30 +634,30 @@ body.modal-launched::before {
 @keyframes fadeLeft {
     0% {
         opacity: 0;
-        right: var(--distance);
+        left: calc(var(--distance) * .5);
     }
 
-    50% {
+    25% {
         opacity: 1;
     }
 
-    100% {
-        right: 0;
+    50% {
+        left: 0;
     }
 }
 
 @keyframes fadeRight {
     0% {
         opacity: 0;
-        left: var(--distance);
+        right: calc(var(--distance) * .5);
     }
     
-    50% {
+    25% {
         opacity: 1;
     }
 
-    100% {
-        left: 0;
+    50% {
+        right: 0;
     }
 }
 
@@ -667,6 +667,7 @@ body.modal-launched::before {
     /* animation-duration required for Firefox compatibility */
     animation-direction: alternate;
     animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
     animation-timeline: view(block 10%);
 }
 
