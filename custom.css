@@ -617,47 +617,56 @@ body.modal-launched::before {
 }
 
 @keyframes fadeUp {
-    from {
+    0% {
         opacity: 0;
-        margin-top: var(--distance);
-        margin-bottom: calc(var(--distance) * -1)
+        top: var(--distance);
     }
 
-    to {
+    50% {
         opacity: 1;
-        margin-top: 0;
-        margin-bottom: 0;
+    }
+
+    100% {
+        top: 0;
     }
 }
 
 @keyframes fadeLeft {
-    from {
+    0% {
         opacity: 0;
-        margin-right: var(--distance);
+        right: var(--distance);
     }
 
-    to {
+    50% {
         opacity: 1;
-        margin-right: 0;
+    }
+
+    100% {
+        right: 0;
     }
 }
 
 @keyframes fadeRight {
-    from {
+    0% {
         opacity: 0;
-        margin-left: var(--distance);
+        left: var(--distance);
+    }
+    
+    50% {
+        opacity: 1;
     }
 
-    to {
-        opacity: 1;
-        margin-left: 0;
+    100% {
+        left: 0;
     }
 }
 
 :is(.fade-up, .fade-left, .fade-right) {
+    position: relative;
     animation-duration: 1ms;
+    /* animation-duration required for Firefox compatibility */
     animation-direction: alternate;
-    animation-timeline: scroll(block nearest);
+    animation-timeline: view(block 10%);
 }
 
 .fade-up {
