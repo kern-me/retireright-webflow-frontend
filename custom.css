@@ -673,33 +673,38 @@ body.modal-launched::before {
     }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    :is(.fade-up, .fade-left, .fade-right) {
-        position: relative;
-        animation-duration: 1ms;
-        /* animation-duration required for Firefox compatibility */
-        animation-direction: alternate;
-        animation-fill-mode: both;
-        animation-timing-function: ease-in-out;
-        animation-timeline: view(block 10%);
-    }
-    
-    .fade-up {
-        animation-name: fadeUp;
-    }
-    .fade-left {
-        animation-name: fadeLeft;
-    }
-    .fade-right {
-        animation-name: fadeRight;
-    }
-    
-    [src="https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a1c688e55af9680ca685b92_Hello400.webp"] {
-        animation-duration: 5s;
-        animation-fill-mode: both;
-        animation-iteration-count: 1;
-        animation-timing-function: ease-in-out;
-        animation-name: fadeUp;
+.fade-up, .fade-left, .fade-right {
+    position: relative;
+    animation-duration: 1ms;
+    /* animation-duration required for Firefox compatibility */
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-timeline: view(block 10%);
+}
+
+.fade-up {
+    animation-name: fadeUp;
+}
+.fade-left {
+    animation-name: fadeLeft;
+}
+.fade-right {
+    animation-name: fadeRight;
+}
+
+[src="https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a1c688e55af9680ca685b92_Hello400.webp"] {
+    /* "Hello" img from homepage banner */
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-name: fadeUp;
+}
+
+@media (prefers-reduced-motion) { 
+    .fade-up, .fade-left, .fade-right, [src="https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a1c688e55af9680ca685b92_Hello400.webp"] {
+        animation-name: unset;
     }
 }
 
