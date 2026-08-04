@@ -417,6 +417,10 @@ body.modal-launched {
     height: 100%;
 }
 
+html:has(.modal-launched) {
+    height: 100%;
+}
+
 body.modal-launched::before {
     /* Overlay for content under modal */
     background: rgb(0 0 0 / 80%);
