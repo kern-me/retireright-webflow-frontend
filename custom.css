@@ -129,6 +129,12 @@ transform: rotate(-45deg) translate(5px, -5px);
     max-width: var(--container-width);
 }
 
+@media (max-width: 767px) {
+    .w-col:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
 :is(p, .button-link):last-child {
     /* No gap following the last element in an area */
     margin-bottom: 0;
@@ -334,12 +340,6 @@ img ~ .button-link {
 .light-blue-section a:not(:is([class], :hover, :focus)) {
     color: var(--_brand-colors---navy-deep);
 }
-
-/* .light-blue-section.w-col,
-.w-col .light-blue-section {
-    Fix padding inside of columns
-    padding-inline: 30px;
-} */
 
 .affiliated-firm:last-child {
     margin-bottom: 0;
@@ -696,16 +696,17 @@ body.modal-launched::before {
 [src="https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a1c688e55af9680ca685b92_Hello400.webp"] {
     /* "Hello" img from homepage banner */
     animation-duration: 5s;
+    animation-delay: 1s;
     animation-fill-mode: both;
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
     animation-name: fadeUp;
 }
 
-/* @media (prefers-reduced-motion) { 
+@media (prefers-reduced-motion) { 
     .fade-up, .fade-left, .fade-right, [src="https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a1c688e55af9680ca685b92_Hello400.webp"] {
         animation-name: unset;
     }
-} */
+}
 
 
