@@ -171,12 +171,23 @@ transform: rotate(-45deg) translate(5px, -5px);
     font-weight: 700;
 }
 
+
 .rr-section--floating {
     background-image: linear-gradient(180deg, #009e56 50%, #004782 50%);
 }
 
 .rr-section--floating-reverse {
     background-image: linear-gradient(to top, #009e56 50%, #004782 50%);
+}
+
+@media (max-width: 767px) {
+    /* When columns stack on smaller screens they may not be the same height so spliting the background color half way up does not align with content */
+    .rr-section--floating {
+        background: #004782;
+    }
+    .rr-section--floating-reverse {
+        background: #009e56;
+    }
 }
 
 .two-column-e .two-column-grid {
@@ -381,6 +392,9 @@ img ~ .button-link {
     max-width: 100%;
 }
 
+.w-richtext h3:first-child {
+    margin-top: 0;
+}
 
 
 /* Profile modal styles */
