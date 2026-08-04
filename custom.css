@@ -100,7 +100,7 @@ transform: rotate(-45deg) translate(5px, -5px);
     .rr-footer-dd-item:is(:focus, :hover) {
         background: white;
     }
-    
+
     .rr-footer-dd-item:not(:last-child) {
         border-bottom: 1px solid white;
     }
@@ -130,7 +130,7 @@ transform: rotate(-45deg) translate(5px, -5px);
     }
     .rr-footer-dd-item .rr-footer-nav-link {
         width: unset;
-        padding: 1em;
+        padding: 2px 0;
     }
 }
 
