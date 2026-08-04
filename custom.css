@@ -174,6 +174,8 @@ transform: rotate(-45deg) translate(5px, -5px);
     margin-inline: auto;
 }
 
+
+
 @media (min-width: 768px) {
     .rr-testimonial-text::before,
     .rr-testimonial-text::after {
@@ -716,7 +718,7 @@ body.modal-launched::before {
     animation-name: fadeUp;
 }
 
-@media (prefers-reduced-motion) { 
+@media (prefers-reduced-motion) or (max-width: 767px) { 
     .fade-up, .fade-left, .fade-right, [src="https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a1c688e55af9680ca685b92_Hello400.webp"] {
         animation-name: unset;
     }
