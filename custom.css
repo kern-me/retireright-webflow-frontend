@@ -9,6 +9,14 @@
     @media (max-width: 1200px) {
         --container-width: 1000px;
     }
+
+    @media (max-width: 990px) {
+        --padding: 60px;
+    }
+
+    @media (max-width: 767px) {
+        --padding: 40px;
+    }
 }
 
 /* ===== NAVBAR ===== */
@@ -141,7 +149,9 @@ transform: rotate(-45deg) translate(5px, -5px);
 }
 
 @media (max-width: 767px) {
-    .w-col:not(:last-child) {
+    .w-col:not(:last-child),
+    .rr-inner--two-col_img-first img {
+        /* Add breathing room between stacked columns */
         margin-bottom: 10px;
     }
 }
