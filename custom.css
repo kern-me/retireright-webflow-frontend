@@ -96,12 +96,14 @@ transform: rotate(-45deg) translate(5px, -5px);
     color: #009e56;
 }
 
-.rr-footer-dd-item:is(:focus, :hover) {
-    background: white;
-}
-
-.rr-footer-dd-item:not(:last-child) {
-    border-bottom: 1px solid white;
+@media (min-width: 768px) {
+    .rr-footer-dd-item:is(:focus, :hover) {
+        background: white;
+    }
+    
+    .rr-footer-dd-item:not(:last-child) {
+        border-bottom: 1px solid white;
+    }
 }
 
 .rr-footer-dd-item .rr-footer-nav-link {
@@ -117,9 +119,18 @@ transform: rotate(-45deg) translate(5px, -5px);
         height: 0;
         overflow: hidden;
         transition: 0.125s height ease-in-out;
+        background: transparent;
     }
     .rr-footer-nav-item:is(:hover, :focus) .rr-footer-nav-dd {
         height: 100%;
+    }
+    .rr-footer-nav-item .rr-footer-nav-dd {
+        height: 100%;
+        display: block;
+    }
+    .rr-footer-dd-item .rr-footer-nav-link {
+        width: unset;
+        padding: 1em;
     }
 }
 
@@ -374,7 +385,7 @@ body::before {
     z-index: 1001;
     display: block;
     pointer-events: none;
-    transition: 0.125s background ease-in-out;
+    transition: .125s background ease-in-out;
 }
 
 body.modal-launched {
@@ -386,9 +397,11 @@ body.modal-launched::before {
     background: rgb(0 0 0 / 80%);
 }
 
-.rr-profile:last-child:is(:nth-of-type(3n+4)) {
-    /* Center align the last profile card if it would be the first item it it's row */
-    grid-column: 2 / 3;
+@media (min-width: 768px) {
+    .rr-profile:last-child:is(:nth-of-type(3n+4)) {
+        /* Center align the last profile card if it would be the first item it it's row */
+        grid-column: 2 / 3;
+    }
 }
 
 .profile-modal {
