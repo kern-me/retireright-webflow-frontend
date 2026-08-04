@@ -182,11 +182,9 @@ transform: rotate(-45deg) translate(5px, -5px);
 
 @media (max-width: 767px) {
     /* When columns stack on smaller screens they may not be the same height so spliting the background color half way up does not align with content */
-    .rr-section--floating {
-        background: #004782;
-    }
+    .rr-section--floating,
     .rr-section--floating-reverse {
-        background: #009e56;
+        background: #004782;
     }
 }
 
@@ -416,6 +414,7 @@ body::before {
 
 body.modal-launched {
     overflow-y: clip;
+    height: 100%;
 }
 
 body.modal-launched::before {
