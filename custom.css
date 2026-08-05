@@ -19,6 +19,39 @@
     }
 }
 
+/* ===== LAYOUT ===== */
+/* One shared gutter so nav, page content and footer share a left/right edge */
+
+.rr-nav,
+.rr-footer,
+.content-section {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.rr-nav-inner,
+.rr-inner.rr-inner:not(.rr-inner--floating),
+body > * > .w-container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: calc(var(--container-width) + 40px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.rr-footer .footer-row {
+    /* 10px here + 10px of .w-col padding lands the columns on the same edge */
+    box-sizing: border-box;
+    width: 100%;
+    max-width: calc(var(--container-width) + 40px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 /* ===== NAVBAR ===== */
 /* Dropdown hover – desktop */
 @media screen and (min-width: 991px) {
