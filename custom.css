@@ -221,13 +221,22 @@ transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* Button links */
-
 img ~ .button-link {
     margin-top: 10px;
 }
 
 :is(.rr-bg--navy, .dark-flipped) .button-link:not(:hover, :focus) {
     background: var(--_brand-colors---green-dark);
+}
+
+/* Youtube embeds */
+@media (max-width: 600px) {
+    .yt-embed {
+        max-width: 100%;
+        aspect-ratio: 16/9;
+        width: unset;
+        height: unset;
+    }
 }
 
 /* Flip Card component */
