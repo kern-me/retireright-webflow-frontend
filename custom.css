@@ -692,6 +692,21 @@ body.modal-launched::before {
     }
 }
 
+/* Contact: How did you hear  */
+
+:is(#referred-by, [for="referred-by"]),
+:is(#describe-how, [for="describe-how"]) {
+    /* Hide additional questions */
+    display: none;
+}
+
+#how-did-you-hear:has([value="referal"]:checked) + :is(#referred-by, [for="referred-by"]),
+#how-did-you-hear:has([value="other"]:checked) + :is(#describe-how, [for="describe-how"])
+ {
+    /* ...until the relevant <option> is selected */
+    display: block;
+}
+
 /* ===== UTILITIES ===== */
 
 .rr-uppercase {
@@ -787,7 +802,7 @@ body.modal-launched::before {
     animation-name: fadeUp;
 }
 
-@media (prefers-reduced-motion) or (max-width: 767px) { 
+@media (max-width: 767px) { 
     .fade-up, .fade-left, .fade-right, [src="https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a1c688e55af9680ca685b92_Hello400.webp"] {
         animation-name: unset;
     }
