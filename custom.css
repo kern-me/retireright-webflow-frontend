@@ -700,8 +700,8 @@ body.modal-launched::before {
     display: none;
 }
 
-#how-did-you-hear:has([value="referal"]:checked) + :is(#referred-by, [for="referred-by"]),
-#how-did-you-hear:has([value="other"]:checked) + :is(#describe-how, [for="describe-how"])
+#how-did-you-hear:has([value="referal"]:checked) ~ :is(#referred-by, [for="referred-by"]),
+#how-did-you-hear:has([value="other"]:checked) ~ :is(#describe-how, [for="describe-how"])
  {
     /* ...until the relevant <option> is selected */
     display: block;
