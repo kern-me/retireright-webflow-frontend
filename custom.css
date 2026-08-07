@@ -696,7 +696,7 @@ body.modal-launched::before {
 
 :is(#referred-by, [for="referred-by"]),
 :is(#describe-how, [for="describe-how"]) {
-    /* Hide additional questions */
+    /* Hide additional questions... */
     display: none;
 }
 
