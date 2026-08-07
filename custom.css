@@ -23,8 +23,7 @@
 /* One shared gutter so nav, page content and footer share a left/right edge */
 
 .rr-nav,
-.rr-footer,
-.content-section {
+.rr-footer {
     padding-left: 0;
     padding-right: 0;
 }
