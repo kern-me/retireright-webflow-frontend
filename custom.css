@@ -6,14 +6,18 @@
  */
 
 :root {
+    --nav-height: 152px;
+    scroll-padding-top: var(--nav-height);
+
     @media (max-width: 1200px) {
         --container-width: 1000px;
     }
 
     @media (max-width: 990px) {
+        --nav-height: 72px;
         --padding: 60px;
     }
-
+    
     @media (max-width: 767px) {
         --padding: 40px;
     }
