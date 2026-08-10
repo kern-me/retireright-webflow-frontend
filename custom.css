@@ -380,6 +380,10 @@ img ~ .button-link {
     margin-top: 0;
 }
 
+.content-section[data-wf--content-section--variant="blue-background"]:not(:is(:focus, :hover)) {
+    color: var(--_brand-colors---link);
+}
+
 .light-blue-section + .light-blue-section {
     padding-top: 0;
 }
