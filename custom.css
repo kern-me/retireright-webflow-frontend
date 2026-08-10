@@ -380,7 +380,7 @@ img ~ .button-link {
     margin-top: 0;
 }
 
-.content-section[data-wf--content-section--variant="blue-background"]:not(:is(:focus, :hover)) {
+.content-section[data-wf--content-section--variant="blue-background"] a:not(:is(:focus, :hover)) {
     color: var(--_brand-colors---link);
 }
 
