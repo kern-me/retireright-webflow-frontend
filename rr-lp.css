@@ -93,9 +93,9 @@
   }
   #rr-lp .hero-bg {
     position: absolute; inset: 0;
-    background-image: url('https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a2b04bfdaa84b5c2bd89da9_hero-background.png');
+    background-image: url('https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a945d7374c35016aa4312a0_rr-lp-hero-photo.jpg');
     background-size: cover;
-    background-position: 8% 28%;
+    background-position: 70% 28%;
     background-repeat: no-repeat;
     filter: saturate(1.05) contrast(1.02);
   }
@@ -199,6 +199,18 @@
   #rr-lp .lead-form-head p:has(+ h2)::before { display: none; }
   #rr-lp .lead-form-head h2 { margin: 0 auto 16px; max-width: 620px; }
   #rr-lp .lead-form-head .section-intro { max-width: 540px; margin: 0 auto; text-align: center; }
+  #rr-lp .lead-form-head::after {
+    content: '';
+    display: block;
+    max-width: 680px;
+    aspect-ratio: 21/9;
+    margin: 40px auto 0;
+    background-image: url('https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a945d742e7a974dfd6bbdcc_rr-lp-form-photo.jpg');
+    background-size: cover;
+    background-position: center 40%;
+    border-radius: 16px;
+    box-shadow: 0 24px 60px -20px rgba(2,6,19,0.35);
+  }
 
   #rr-lp .lead-form-card {
     max-width: 680px;
@@ -1595,9 +1607,9 @@
   #rr-lp .real-image.ar-16-9 { aspect-ratio: 16/9; }
   #rr-lp .real-image.ar-21-9 { aspect-ratio: 21/9; }
   /* Section images: the mockup carried these as inline base64 background-images on each .real-image; the whtml port dropped the inline styles, so re-attach the uploaded assets by section (one .real-image per section). */
-  #rr-lp .why-section .real-image { background-image: url('https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a2b04bffe64ff3e0d58a52b_why-retireright-photo.png'); }
-  #rr-lp .process-section .real-image { background-image: url('https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a2b04bf5160e61dc0b2996e_process-section-photo.png'); }
-  #rr-lp .think-section .real-image { background-image: url('https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a2b04bfffb62cfd65773b02_our-promise-photo.png'); }
+  #rr-lp .why-section .real-image { background-image: url('https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a945d74aff009655dde2c11_rr-lp-why-photo.jpg'); background-position: center 25%; }
+  #rr-lp .process-section .real-image { background-image: url('https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a945d732d153cd3c0acf0d1_rr-lp-process-photo.jpg'); }
+  #rr-lp .think-section .real-image { background-image: url('https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a945d747bf805f51df92bfd_rr-lp-think-photo.jpg'); }
   #rr-lp .real-image.ar-circle {
     aspect-ratio: 1/1;
     border-radius: 50%;
