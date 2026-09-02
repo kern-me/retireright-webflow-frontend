@@ -1609,7 +1609,7 @@
   /* Section images: the mockup carried these as inline base64 background-images on each .real-image; the whtml port dropped the inline styles, so re-attach the uploaded assets by section (one .real-image per section). */
   #rr-lp .why-section .real-image { background-image: url('https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a94625bc2de24e69e750216_rr-lp-why-photo.jpg'); background-position: center 25%; }
   #rr-lp .process-section .real-image { background-image: url('https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a94625a7bf805f51dfb745b_rr-lp-process-photo.jpg'); }
-  #rr-lp .think-section .real-image { background-image: url('https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a94625aab8653c04f07dc56_rr-lp-think-photo.jpg'); }
+  #rr-lp .think-section .real-image { background-image: url('https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a9843c639fd7eb3d59ce74a_rr-lp-think-photo-v2.jpg'); background-position: center 30%; }
   #rr-lp .real-image.ar-circle {
     aspect-ratio: 1/1;
     border-radius: 50%;
