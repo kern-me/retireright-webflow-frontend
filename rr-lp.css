@@ -1717,6 +1717,7 @@
     #rr-lp .trust-grid { grid-template-columns: 1fr; gap: 24px; }
     #rr-lp .hero-stats { grid-template-columns: 1fr 1fr; }
     #rr-lp .footer-top { grid-template-columns: 1fr; }
+    #rr-lp .lead-form-fields { grid-template-columns: 1fr; }
   }
 
   #rr-lp .framework-preview-poster { position:absolute; inset:0; background-image:url('https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a2b04bfdaa84b5c2bd89da9_hero-background.png'); background-size:cover; background-position:center 30%; filter:blur(3px) saturate(1.1); }
