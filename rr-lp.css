@@ -1718,6 +1718,11 @@
     #rr-lp .hero-stats { grid-template-columns: 1fr 1fr; }
     #rr-lp .footer-top { grid-template-columns: 1fr; }
     #rr-lp .lead-form-fields { grid-template-columns: 1fr; }
+    /* The desktop scrim runs left-to-right because the copy sits beside the subject.
+       Stacked, the copy crosses his face, so the gradient has to run top-to-bottom. */
+    #rr-lp .hero-bg::after {
+      background: linear-gradient(180deg, rgba(2,6,19,0.88) 0%, rgba(2,6,19,0.74) 48%, rgba(2,6,19,0.6) 100%);
+    }
   }
 
   #rr-lp .framework-preview-poster { position:absolute; inset:0; background-image:url('https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a2b04bfdaa84b5c2bd89da9_hero-background.png'); background-size:cover; background-position:center 30%; filter:blur(3px) saturate(1.1); }
