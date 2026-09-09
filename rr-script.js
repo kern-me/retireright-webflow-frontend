@@ -247,3 +247,9 @@
       });
     });
   })();
+  // Webflow rejects `placeholder` as a settable key and as a custom attribute on a
+  // FormTextInput, so this string cannot be corrected through the Designer API.
+  (function () {
+    var phone = document.querySelector('#lead-form [name="phone"]');
+    if (phone) phone.setAttribute('placeholder', 'Phone number');
+  })();
