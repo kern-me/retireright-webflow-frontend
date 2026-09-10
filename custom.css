@@ -816,8 +816,3 @@ body.modal-launched::before {
 }
 
 
-
-/* Client copy for this subhead is a sentence with an italic tail, so the global h3 uppercase has to come off. */
-.rr-promo-sub {
-    text-transform: unset;
-}
