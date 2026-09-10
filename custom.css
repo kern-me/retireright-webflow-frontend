@@ -799,18 +799,8 @@ body.modal-launched::before {
     animation-name: fadeRight;
 }
 
-[src="https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a1c688e55af9680ca685b92_Hello400.webp"] {
-    /* "Hello" img from homepage banner */
-    animation-duration: 5s;
-    animation-delay: 1s;
-    animation-fill-mode: both;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-    animation-name: fadeUp;
-}
-
 @media (max-width: 767px) { 
-    .fade-up, .fade-left, .fade-right, [src="https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a1c688e55af9680ca685b92_Hello400.webp"] {
+    .fade-up, .fade-left, .fade-right {
         animation-name: unset;
     }
 }
