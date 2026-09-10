@@ -1728,7 +1728,6 @@
     #rr-lp .lead-form-fields { grid-template-columns: 1fr; }
     /* No photo at phone width: stacked, the headline covered his face whatever the scrim did.
        Same wash as .final-cta so the top and bottom of the page bookend. */
-    #rr-lp .hero { min-height: 0; }
     #rr-lp .hero-bg {
       background-image: none;
       background: linear-gradient(135deg, #020613 0%, #06195C 60%, #0B2E94 100%);
