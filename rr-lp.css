@@ -1710,6 +1710,9 @@
     #rr-lp .pillars-grid { grid-template-columns: 1fr 1fr; }
     #rr-lp .process-grid { grid-template-columns: 1fr; }
     #rr-lp .trust-bar { padding: 48px 24px; }
+    /* Class-scoped (1,1,0) beats the generic "#rr-lp section" override above, so these two kept desktop padding. */
+    #rr-lp .think-section { padding: 64px 24px; }
+    #rr-lp .transition-band { padding: 32px 24px; }
     #rr-lp .trust-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
     #rr-lp .why-grid { grid-template-columns: 1fr; }
     #rr-lp .t-grid { grid-template-columns: 1fr; }
