@@ -1699,6 +1699,11 @@
     #rr-lp nav .nav-hamburger { display: inline-flex; }
     #rr-lp section { padding: 64px 24px; }
     #rr-lp .hero { padding: 56px 24px 80px; }
+    /* The desktop scrim runs left-to-right because the copy sits beside the subject.
+       Stacked, the copy crosses his face, so the gradient has to run top-to-bottom. */
+    #rr-lp .hero-bg::after {
+      background: linear-gradient(180deg, rgba(2,6,19,0.88) 0%, rgba(2,6,19,0.74) 48%, rgba(2,6,19,0.6) 100%);
+    }
     #rr-lp .hero-grid { grid-template-columns: 1fr; gap: 48px; }
     #rr-lp .formula-grid { grid-template-columns: 1fr; gap: 32px; }
     #rr-lp .pillars-head { grid-template-columns: 1fr; gap: 16px; }
@@ -1718,11 +1723,16 @@
     #rr-lp .hero-stats { grid-template-columns: 1fr 1fr; }
     #rr-lp .footer-top { grid-template-columns: 1fr; }
     #rr-lp .lead-form-fields { grid-template-columns: 1fr; }
-    /* The desktop scrim runs left-to-right because the copy sits beside the subject.
-       Stacked, the copy crosses his face, so the gradient has to run top-to-bottom. */
-    #rr-lp .hero-bg::after {
-      background: linear-gradient(180deg, rgba(2,6,19,0.88) 0%, rgba(2,6,19,0.74) 48%, rgba(2,6,19,0.6) 100%);
+    /* No photo at phone width: stacked, the headline covered his face whatever the scrim did.
+       Same wash as .final-cta so the top and bottom of the page bookend. */
+    #rr-lp .hero { min-height: 0; }
+    #rr-lp .hero-bg {
+      background-image: none;
+      background: linear-gradient(135deg, #020613 0%, #06195C 60%, #0B2E94 100%);
     }
+    #rr-lp .hero-bg::after { background: none; }
+    #rr-lp .real-image.ar-21-9 { aspect-ratio: 4/3; }
+    #rr-lp .lead-form-head::after { aspect-ratio: 4/3; }
   }
 
   #rr-lp .framework-preview-poster { position:absolute; inset:0; background-image:url('https://cdn.prod.website-files.com/6a117e9fbe098b9d6f3b2142/6a2b04bfdaa84b5c2bd89da9_hero-background.png'); background-size:cover; background-position:center 30%; filter:blur(3px) saturate(1.1); }
