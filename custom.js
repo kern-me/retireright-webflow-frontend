@@ -28,6 +28,29 @@
 
 
 
+  var contactLabels = {
+    'first-name': 'First Name',
+    'last-name': 'Last Name',
+    'email': 'Email',
+    'phone': 'Phone',
+    'service-financial-planning': 'Financial Planning',
+    'service-investment-management': 'Investment Management',
+    'service-company-retirement-plan': 'Company Retirement Plan',
+    'service-executive-benefits': 'Executive Benefits',
+    'service-not-sure': 'Not Sure',
+    'how-did-you-hear': 'How Did You Hear About Us',
+    'referred-by': 'Referred By',
+    'describe-how': 'How You Found Us',
+    'message': 'Message'
+  };
+  document.querySelectorAll('form#email-form #first-name').forEach(function (first) {
+    first.form.querySelectorAll('input[id],select[id],textarea[id]').forEach(function (el) {
+      if (!contactLabels[el.id]) return;
+      el.name = el.id;
+      el.setAttribute('data-name', contactLabels[el.id]);
+    });
+  });
+
   // ===== INTERACTIONS =====
   // Add features here. Pattern:
   //   var el = document.querySelector('.thing');
